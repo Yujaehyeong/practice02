@@ -9,12 +9,15 @@ min , max = 1, 100
 oper ='y'
 while oper!='n' :
     print('수를 결정하였습니다. 맞추어 보세요')
+    print(min,'-',max)
     answer= random.randrange(max) +min
-    print(answer)
 
     number =0
+    count =1
     while answer !=number:
-        number = int(input('수 입력: '))
+        print(count,end='')
+        count+=1
+        number = int(input('>> '))
         if answer > number:
             print('더 높게')
             min = number;
